@@ -1,31 +1,11 @@
-import math
+from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor, as_completed
 import time
 
-from conf import settings
 import utils
 
 
 @utils.time_it(logger=utils.logger)
-def count_prime_numbers(upper_bound):
-    utils.logger.info(f"Calculating prime numbers up to {upper_bound:,}")
-    count = 0
-    for num in range(2, upper_bound + 1):
-        if all(num % i != 0 for i in range(2, int(num ** 0.5) + 1)):
-            count += 1
-    utils.logger.info(f"Result: {count:,} prime numbers found")
-    return count
-
-
-@utils.time_it(logger=utils.logger)
-def factorial(number):
-    utils.logger.info(f"Calculating factorial of {number:,}")
-    result = math.factorial(number)
-    utils.logger.info(f"Result: {result:,}")
-    return result
-
-
-@utils.time_it(logger=utils.logger)
-def calculate_fibonacci(n):
+def calculate_fibonacci(n: int) -> int:
     utils.logger.info(f"Calculating the {n}-th Fibonacci number")
     
     def fib(n):
@@ -40,31 +20,131 @@ def calculate_fibonacci(n):
 
 
 @utils.time_it(logger=utils.logger)
-def calculate_fibonacci_efficient(n):
-    utils.logger.info(f"Calculating the {n}-th Fibonacci number efficiently")
-    a, b = 0, 1
-    for _ in range(n):
-        a, b = b, a + b
-    utils.logger.info(f"The {n}-th Fibonacci number is: {a:,}")
-    return a
+def run_cpu_bound_seq() -> None:
+    numbers: list[int] = [38, 39, 40, 41]
+
+    results: list[int] = [calculate_fibonacci(number) for number in numbers]
+
+    utils.logger.info("Fibonacci Calculation Results:")
+    for result in results:
+        utils.logger.info(result)
 
 
-from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor
+@utils.time_it(logger=utils.logger)
+def run_cpu_bound_map() -> None:
+    numbers: list[int] = [38, 39, 40, 41]
 
-if __name__ == "__main__":
-    numbers = [38, 39, 40, 41, 38, 39, 40, 41]
-
-    # Using ThreadPoolExecutor to manage threads
-    start_time = time.time()
+    start_time: float = time.time()
     with ThreadPoolExecutor() as executor:
         executor.map(calculate_fibonacci, numbers)
-    end_time = time.time()
+    end_time: float = time.time()
     utils.logger.info(f"All threads finished and returned in {end_time - start_time:,.2f} seconds")
 
-    # Using ProcessPoolExecutor to manage processes
-    start_time = time.time()
+    start_time: float = time.time()
     with ProcessPoolExecutor() as executor:
         executor.map(calculate_fibonacci, numbers)
-    end_time = time.time()
+    end_time: float = time.time()
     utils.logger.info(f"All processes finished and returned in  {end_time - start_time:,.2f} seconds")
 
+
+@utils.time_it(logger=utils.logger)
+def run_cpu_bound_as_completed() -> None:
+    numbers: list[int] = [38, 39, 40, 41]
+
+    start_time: float = time.time()
+    with ThreadPoolExecutor() as executor:
+        futures = [executor.submit(calculate_fibonacci, number) for number in numbers]
+        for future in as_completed(futures):
+            utils.logger.info(future.result())
+    end_time: float = time.time()
+    utils.logger.info(f"All threads finished and returned in {end_time - start_time:,.2f} seconds")
+
+    start_time: float = time.time()
+    with ProcessPoolExecutor() as executor:
+        futures = [executor.submit(calculate_fibonacci, number) for number in numbers]
+        for future in as_completed(futures):
+            utils.logger.info(future.result())
+    end_time: float = time.time()
+    utils.logger.info(f"All processes finished and returned in  {end_time - start_time:,.2f} seconds")
+
+
+@utils.time_it(logger=utils.logger)
+def mail_letter(letter: tuple[str, int]) -> str:
+    utils.logger.info(f"Started mailing letter {letter[0]} (duration: {letter[1]}s)")
+    time.sleep(letter[1])
+    utils.logger.info(f"Finished mailing letter {letter[0]}")
+    return f"Letter {letter[0]} mailed"
+
+
+@utils.time_it(logger=utils.logger)
+def run_io_bound_seq() -> None:
+    letters: dict[str, int] = {'A': 4, 'B': 5, 'C': 3, 'D': 2, 'E': 3}
+    
+    results: list[str] = [mail_letter(letter) for letter in letters.items()]
+
+    utils.logger.info("Mailing Results:")
+    for result in results:
+        utils.logger.info(result)
+
+
+@utils.time_it(logger=utils.logger)
+def run_io_bound_map() -> None:
+    letters: dict[str, int] = {'A': 4, 'B': 5, 'C': 3, 'D': 2, 'E': 3}
+
+    start_time: float = time.time()
+    with ThreadPoolExecutor() as executor:
+        results: list[str] = executor.map(mail_letter, letters.items())
+    end_time: float = time.time()
+    utils.logger.info(f"All threads finished and returned in {end_time - start_time:,.2f} seconds")
+
+    utils.logger.info("Mailing Results:")
+    for result in results:
+        utils.logger.info(result)
+
+    start_time: float = time.time()
+    with ProcessPoolExecutor() as executor:
+        results: list[str] = executor.map(mail_letter, letters.items())
+    end_time: float = time.time()
+    utils.logger.info(f"All processes finished and returned in  {end_time - start_time:,.2f} seconds")
+
+    utils.logger.info("Mailing Results:")
+    for result in results:
+        utils.logger.info(result)
+
+
+@utils.time_it(logger=utils.logger)
+def run_io_bound_as_completed() -> None:
+    letters: dict[str, int] = {'A': 4, 'B': 5, 'C': 3, 'D': 2, 'E': 3}
+
+    start_time: float = time.time()
+    with ThreadPoolExecutor() as executor:
+        futures = [executor.submit(mail_letter, letter) for letter in letters.items()]
+        for future in as_completed(futures):
+            utils.logger.info(future.result())
+    end_time: float = time.time()
+    utils.logger.info(f"All threads finished and returned in {end_time - start_time:,.2f} seconds")
+
+    start_time: float = time.time()
+    with ProcessPoolExecutor() as executor:
+        futures = [executor.submit(mail_letter, letter) for letter in letters.items()]
+        for future in as_completed(futures):
+            utils.logger.info(future.result())
+    end_time: float = time.time()
+    utils.logger.info(f"All processes finished and returned in  {end_time - start_time:,.2f} seconds")
+
+
+@utils.time_it(logger=utils.logger)
+def main() -> None:
+    utils.logger.info("------> Running I/O Bound Tasks")
+    run_io_bound_seq()
+    run_io_bound_map()
+    run_io_bound_as_completed()
+
+    utils.logger.info("------> Running CPU Bound Tasks")
+    run_cpu_bound_seq()
+    run_cpu_bound_map()
+    run_cpu_bound_as_completed()
+
+
+if __name__ == "__main__":
+    main()

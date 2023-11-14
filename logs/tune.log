@@ -1,0 +1,245 @@
+[2023-11-14 14:07:22] Running main with args: () and kwargs: {}
+[2023-11-14 14:07:22] ------> Running I/O Bound Tasks
+[2023-11-14 14:07:22] Running run_io_bound_seq with args: () and kwargs: {}
+[2023-11-14 14:07:22] Running mail_letter with args: (('A', 4),) and kwargs: {}
+[2023-11-14 14:07:22] Started mailing letter A (duration: 4s)
+[2023-11-14 14:07:26] Finished mailing letter A
+[2023-11-14 14:07:26] mail_letter with args: (('A', 4),) and kwargs: {} ran in 4.00s
+[2023-11-14 14:07:26] Running mail_letter with args: (('B', 5),) and kwargs: {}
+[2023-11-14 14:07:26] Started mailing letter B (duration: 5s)
+[2023-11-14 14:07:31] Finished mailing letter B
+[2023-11-14 14:07:31] mail_letter with args: (('B', 5),) and kwargs: {} ran in 5.01s
+[2023-11-14 14:07:31] Running mail_letter with args: (('C', 3),) and kwargs: {}
+[2023-11-14 14:07:31] Started mailing letter C (duration: 3s)
+[2023-11-14 14:07:34] Finished mailing letter C
+[2023-11-14 14:07:34] mail_letter with args: (('C', 3),) and kwargs: {} ran in 3.01s
+[2023-11-14 14:07:34] Running mail_letter with args: (('D', 2),) and kwargs: {}
+[2023-11-14 14:07:34] Started mailing letter D (duration: 2s)
+[2023-11-14 14:07:36] Finished mailing letter D
+[2023-11-14 14:07:36] mail_letter with args: (('D', 2),) and kwargs: {} ran in 2.01s
+[2023-11-14 14:07:36] Running mail_letter with args: (('E', 3),) and kwargs: {}
+[2023-11-14 14:07:36] Started mailing letter E (duration: 3s)
+[2023-11-14 14:07:39] Finished mailing letter E
+[2023-11-14 14:07:39] mail_letter with args: (('E', 3),) and kwargs: {} ran in 3.01s
+[2023-11-14 14:07:39] Mailing Results:
+[2023-11-14 14:07:39] Letter A mailed
+[2023-11-14 14:07:39] Letter B mailed
+[2023-11-14 14:07:39] Letter C mailed
+[2023-11-14 14:07:39] Letter D mailed
+[2023-11-14 14:07:39] Letter E mailed
+[2023-11-14 14:07:39] run_io_bound_seq with args: () and kwargs: {} ran in 17.03s
+[2023-11-14 14:07:39] Running run_io_bound_map with args: () and kwargs: {}
+[2023-11-14 14:07:39] Running mail_letter with args: (('A', 4),) and kwargs: {}
+[2023-11-14 14:07:39] Running mail_letter with args: (('B', 5),) and kwargs: {}
+[2023-11-14 14:07:39] Started mailing letter A (duration: 4s)
+[2023-11-14 14:07:39] Running mail_letter with args: (('C', 3),) and kwargs: {}
+[2023-11-14 14:07:39] Started mailing letter B (duration: 5s)
+[2023-11-14 14:07:39] Running mail_letter with args: (('D', 2),) and kwargs: {}
+[2023-11-14 14:07:39] Running mail_letter with args: (('E', 3),) and kwargs: {}
+[2023-11-14 14:07:39] Started mailing letter C (duration: 3s)
+[2023-11-14 14:07:39] Started mailing letter D (duration: 2s)
+[2023-11-14 14:07:39] Started mailing letter E (duration: 3s)
+[2023-11-14 14:07:41] Finished mailing letter D
+[2023-11-14 14:07:41] mail_letter with args: (('D', 2),) and kwargs: {} ran in 2.00s
+[2023-11-14 14:07:42] Finished mailing letter E
+[2023-11-14 14:07:42] mail_letter with args: (('E', 3),) and kwargs: {} ran in 3.00s
+[2023-11-14 14:07:42] Finished mailing letter C
+[2023-11-14 14:07:42] mail_letter with args: (('C', 3),) and kwargs: {} ran in 3.00s
+[2023-11-14 14:07:43] Finished mailing letter A
+[2023-11-14 14:07:43] mail_letter with args: (('A', 4),) and kwargs: {} ran in 4.01s
+[2023-11-14 14:07:44] Finished mailing letter B
+[2023-11-14 14:07:44] mail_letter with args: (('B', 5),) and kwargs: {} ran in 5.00s
+[2023-11-14 14:07:44] All threads finished and returned in 5.01 seconds
+[2023-11-14 14:07:44] Mailing Results:
+[2023-11-14 14:07:44] Letter A mailed
+[2023-11-14 14:07:44] Letter B mailed
+[2023-11-14 14:07:44] Letter C mailed
+[2023-11-14 14:07:44] Letter D mailed
+[2023-11-14 14:07:44] Letter E mailed
+[2023-11-14 14:07:44] Running mail_letter with args: (('A', 4),) and kwargs: {}
+[2023-11-14 14:07:44] Started mailing letter A (duration: 4s)
+[2023-11-14 14:07:44] Running mail_letter with args: (('B', 5),) and kwargs: {}
+[2023-11-14 14:07:44] Started mailing letter B (duration: 5s)
+[2023-11-14 14:07:44] Running mail_letter with args: (('C', 3),) and kwargs: {}
+[2023-11-14 14:07:44] Started mailing letter C (duration: 3s)
+[2023-11-14 14:07:44] Running mail_letter with args: (('D', 2),) and kwargs: {}
+[2023-11-14 14:07:44] Started mailing letter D (duration: 2s)
+[2023-11-14 14:07:44] Running mail_letter with args: (('E', 3),) and kwargs: {}
+[2023-11-14 14:07:44] Started mailing letter E (duration: 3s)
+[2023-11-14 14:07:46] Finished mailing letter D
+[2023-11-14 14:07:46] mail_letter with args: (('D', 2),) and kwargs: {} ran in 2.01s
+[2023-11-14 14:07:47] Finished mailing letter C
+[2023-11-14 14:07:47] mail_letter with args: (('C', 3),) and kwargs: {} ran in 3.01s
+[2023-11-14 14:07:47] Finished mailing letter E
+[2023-11-14 14:07:47] mail_letter with args: (('E', 3),) and kwargs: {} ran in 3.01s
+[2023-11-14 14:07:48] Finished mailing letter A
+[2023-11-14 14:07:48] mail_letter with args: (('A', 4),) and kwargs: {} ran in 4.01s
+[2023-11-14 14:07:49] Finished mailing letter B
+[2023-11-14 14:07:49] mail_letter with args: (('B', 5),) and kwargs: {} ran in 5.01s
+[2023-11-14 14:07:49] All processes finished and returned in  5.12 seconds
+[2023-11-14 14:07:49] Mailing Results:
+[2023-11-14 14:07:49] Letter A mailed
+[2023-11-14 14:07:49] Letter B mailed
+[2023-11-14 14:07:49] Letter C mailed
+[2023-11-14 14:07:49] Letter D mailed
+[2023-11-14 14:07:49] Letter E mailed
+[2023-11-14 14:07:49] run_io_bound_map with args: () and kwargs: {} ran in 10.12s
+[2023-11-14 14:07:49] Running run_io_bound_as_completed with args: () and kwargs: {}
+[2023-11-14 14:07:49] Running mail_letter with args: (('A', 4),) and kwargs: {}
+[2023-11-14 14:07:49] Started mailing letter A (duration: 4s)
+[2023-11-14 14:07:49] Running mail_letter with args: (('B', 5),) and kwargs: {}
+[2023-11-14 14:07:49] Running mail_letter with args: (('C', 3),) and kwargs: {}
+[2023-11-14 14:07:49] Started mailing letter B (duration: 5s)
+[2023-11-14 14:07:49] Started mailing letter C (duration: 3s)
+[2023-11-14 14:07:49] Running mail_letter with args: (('D', 2),) and kwargs: {}
+[2023-11-14 14:07:49] Running mail_letter with args: (('E', 3),) and kwargs: {}
+[2023-11-14 14:07:49] Started mailing letter D (duration: 2s)
+[2023-11-14 14:07:49] Started mailing letter E (duration: 3s)
+[2023-11-14 14:07:51] Finished mailing letter D
+[2023-11-14 14:07:51] mail_letter with args: (('D', 2),) and kwargs: {} ran in 2.01s
+[2023-11-14 14:07:51] Letter D mailed
+[2023-11-14 14:07:52] Finished mailing letter C
+[2023-11-14 14:07:52] Finished mailing letter E
+[2023-11-14 14:07:52] mail_letter with args: (('C', 3),) and kwargs: {} ran in 3.01s
+[2023-11-14 14:07:52] mail_letter with args: (('E', 3),) and kwargs: {} ran in 3.01s
+[2023-11-14 14:07:52] Letter C mailed
+[2023-11-14 14:07:52] Letter E mailed
+[2023-11-14 14:07:53] Finished mailing letter A
+[2023-11-14 14:07:53] mail_letter with args: (('A', 4),) and kwargs: {} ran in 4.01s
+[2023-11-14 14:07:53] Letter A mailed
+[2023-11-14 14:07:54] Finished mailing letter B
+[2023-11-14 14:07:54] mail_letter with args: (('B', 5),) and kwargs: {} ran in 5.01s
+[2023-11-14 14:07:54] Letter B mailed
+[2023-11-14 14:07:54] All threads finished and returned in 5.01 seconds
+[2023-11-14 14:07:54] Running mail_letter with args: (('A', 4),) and kwargs: {}
+[2023-11-14 14:07:54] Started mailing letter A (duration: 4s)
+[2023-11-14 14:07:54] Running mail_letter with args: (('B', 5),) and kwargs: {}
+[2023-11-14 14:07:54] Started mailing letter B (duration: 5s)
+[2023-11-14 14:07:54] Running mail_letter with args: (('C', 3),) and kwargs: {}
+[2023-11-14 14:07:54] Started mailing letter C (duration: 3s)
+[2023-11-14 14:07:54] Running mail_letter with args: (('D', 2),) and kwargs: {}
+[2023-11-14 14:07:54] Started mailing letter D (duration: 2s)
+[2023-11-14 14:07:54] Running mail_letter with args: (('E', 3),) and kwargs: {}
+[2023-11-14 14:07:54] Started mailing letter E (duration: 3s)
+[2023-11-14 14:07:56] Finished mailing letter D
+[2023-11-14 14:07:56] mail_letter with args: (('D', 2),) and kwargs: {} ran in 2.01s
+[2023-11-14 14:07:56] Letter D mailed
+[2023-11-14 14:07:57] Finished mailing letter C
+[2023-11-14 14:07:57] mail_letter with args: (('C', 3),) and kwargs: {} ran in 3.01s
+[2023-11-14 14:07:57] Letter C mailed
+[2023-11-14 14:07:57] Finished mailing letter E
+[2023-11-14 14:07:57] mail_letter with args: (('E', 3),) and kwargs: {} ran in 3.01s
+[2023-11-14 14:07:57] Letter E mailed
+[2023-11-14 14:07:58] Finished mailing letter A
+[2023-11-14 14:07:58] mail_letter with args: (('A', 4),) and kwargs: {} ran in 4.01s
+[2023-11-14 14:07:58] Letter A mailed
+[2023-11-14 14:07:59] Finished mailing letter B
+[2023-11-14 14:07:59] mail_letter with args: (('B', 5),) and kwargs: {} ran in 5.01s
+[2023-11-14 14:07:59] Letter B mailed
+[2023-11-14 14:07:59] All processes finished and returned in  5.11 seconds
+[2023-11-14 14:07:59] run_io_bound_as_completed with args: () and kwargs: {} ran in 10.12s
+[2023-11-14 14:07:59] ------> Running CPU Bound Tasks
+[2023-11-14 14:07:59] Running run_cpu_bound_seq with args: () and kwargs: {}
+[2023-11-14 14:07:59] Running calculate_fibonacci with args: (38,) and kwargs: {}
+[2023-11-14 14:07:59] Calculating the 38-th Fibonacci number
+[2023-11-14 14:08:04] The 38-th Fibonacci number is: 39,088,169
+[2023-11-14 14:08:04] calculate_fibonacci with args: (38,) and kwargs: {} ran in 4.64s
+[2023-11-14 14:08:04] Running calculate_fibonacci with args: (39,) and kwargs: {}
+[2023-11-14 14:08:04] Calculating the 39-th Fibonacci number
+[2023-11-14 14:08:12] The 39-th Fibonacci number is: 63,245,986
+[2023-11-14 14:08:12] calculate_fibonacci with args: (39,) and kwargs: {} ran in 7.50s
+[2023-11-14 14:08:12] Running calculate_fibonacci with args: (40,) and kwargs: {}
+[2023-11-14 14:08:12] Calculating the 40-th Fibonacci number
+[2023-11-14 14:08:24] The 40-th Fibonacci number is: 102,334,155
+[2023-11-14 14:08:24] calculate_fibonacci with args: (40,) and kwargs: {} ran in 12.13s
+[2023-11-14 14:08:24] Running calculate_fibonacci with args: (41,) and kwargs: {}
+[2023-11-14 14:08:24] Calculating the 41-th Fibonacci number
+[2023-11-14 14:08:43] The 41-th Fibonacci number is: 165,580,141
+[2023-11-14 14:08:43] calculate_fibonacci with args: (41,) and kwargs: {} ran in 19.66s
+[2023-11-14 14:08:43] Fibonacci Calculation Results:
+[2023-11-14 14:08:43] 39088169
+[2023-11-14 14:08:43] 63245986
+[2023-11-14 14:08:43] 102334155
+[2023-11-14 14:08:43] 165580141
+[2023-11-14 14:08:43] run_cpu_bound_seq with args: () and kwargs: {} ran in 43.92s
+[2023-11-14 14:08:43] Running run_cpu_bound_map with args: () and kwargs: {}
+[2023-11-14 14:08:43] Running calculate_fibonacci with args: (38,) and kwargs: {}
+[2023-11-14 14:08:43] Calculating the 38-th Fibonacci number
+[2023-11-14 14:08:43] Running calculate_fibonacci with args: (39,) and kwargs: {}
+[2023-11-14 14:08:43] Running calculate_fibonacci with args: (40,) and kwargs: {}
+[2023-11-14 14:08:43] Calculating the 39-th Fibonacci number
+[2023-11-14 14:08:43] Running calculate_fibonacci with args: (41,) and kwargs: {}
+[2023-11-14 14:08:43] Calculating the 41-th Fibonacci number
+[2023-11-14 14:08:43] Calculating the 40-th Fibonacci number
+[2023-11-14 14:09:02] The 38-th Fibonacci number is: 39,088,169
+[2023-11-14 14:09:02] calculate_fibonacci with args: (38,) and kwargs: {} ran in 18.56s
+[2023-11-14 14:09:11] The 39-th Fibonacci number is: 63,245,986
+[2023-11-14 14:09:11] calculate_fibonacci with args: (39,) and kwargs: {} ran in 27.21s
+[2023-11-14 14:09:20] The 40-th Fibonacci number is: 102,334,155
+[2023-11-14 14:09:20] calculate_fibonacci with args: (40,) and kwargs: {} ran in 36.31s
+[2023-11-14 14:09:27] The 41-th Fibonacci number is: 165,580,141
+[2023-11-14 14:09:27] calculate_fibonacci with args: (41,) and kwargs: {} ran in 43.59s
+[2023-11-14 14:09:27] All threads finished and returned in 43.68 seconds
+[2023-11-14 14:09:27] Running calculate_fibonacci with args: (38,) and kwargs: {}
+[2023-11-14 14:09:27] Calculating the 38-th Fibonacci number
+[2023-11-14 14:09:27] Running calculate_fibonacci with args: (39,) and kwargs: {}
+[2023-11-14 14:09:27] Calculating the 39-th Fibonacci number
+[2023-11-14 14:09:27] Running calculate_fibonacci with args: (40,) and kwargs: {}
+[2023-11-14 14:09:27] Calculating the 40-th Fibonacci number
+[2023-11-14 14:09:27] Running calculate_fibonacci with args: (41,) and kwargs: {}
+[2023-11-14 14:09:27] Calculating the 41-th Fibonacci number
+[2023-11-14 14:09:32] The 38-th Fibonacci number is: 39,088,169
+[2023-11-14 14:09:32] calculate_fibonacci with args: (38,) and kwargs: {} ran in 5.02s
+[2023-11-14 14:09:35] The 39-th Fibonacci number is: 63,245,986
+[2023-11-14 14:09:35] calculate_fibonacci with args: (39,) and kwargs: {} ran in 8.09s
+[2023-11-14 14:09:40] The 40-th Fibonacci number is: 102,334,155
+[2023-11-14 14:09:40] calculate_fibonacci with args: (40,) and kwargs: {} ran in 12.93s
+[2023-11-14 14:09:48] The 41-th Fibonacci number is: 165,580,141
+[2023-11-14 14:09:48] calculate_fibonacci with args: (41,) and kwargs: {} ran in 20.44s
+[2023-11-14 14:09:48] All processes finished and returned in  20.49 seconds
+[2023-11-14 14:09:48] run_cpu_bound_map with args: () and kwargs: {} ran in 64.17s
+[2023-11-14 14:09:48] Running run_cpu_bound_as_completed with args: () and kwargs: {}
+[2023-11-14 14:09:48] Running calculate_fibonacci with args: (38,) and kwargs: {}
+[2023-11-14 14:09:48] Calculating the 38-th Fibonacci number
+[2023-11-14 14:09:48] Running calculate_fibonacci with args: (39,) and kwargs: {}
+[2023-11-14 14:09:48] Calculating the 39-th Fibonacci number
+[2023-11-14 14:09:48] Running calculate_fibonacci with args: (40,) and kwargs: {}
+[2023-11-14 14:09:48] Calculating the 40-th Fibonacci number
+[2023-11-14 14:09:48] Running calculate_fibonacci with args: (41,) and kwargs: {}
+[2023-11-14 14:09:48] Calculating the 41-th Fibonacci number
+[2023-11-14 14:10:06] The 38-th Fibonacci number is: 39,088,169
+[2023-11-14 14:10:06] calculate_fibonacci with args: (38,) and kwargs: {} ran in 18.66s
+[2023-11-14 14:10:06] 39088169
+[2023-11-14 14:10:15] The 39-th Fibonacci number is: 63,245,986
+[2023-11-14 14:10:15] calculate_fibonacci with args: (39,) and kwargs: {} ran in 27.05s
+[2023-11-14 14:10:15] 63245986
+[2023-11-14 14:10:24] The 40-th Fibonacci number is: 102,334,155
+[2023-11-14 14:10:24] calculate_fibonacci with args: (40,) and kwargs: {} ran in 36.63s
+[2023-11-14 14:10:24] 102334155
+[2023-11-14 14:10:32] The 41-th Fibonacci number is: 165,580,141
+[2023-11-14 14:10:32] calculate_fibonacci with args: (41,) and kwargs: {} ran in 43.96s
+[2023-11-14 14:10:32] 165580141
+[2023-11-14 14:10:32] All threads finished and returned in 44.02 seconds
+[2023-11-14 14:10:32] Running calculate_fibonacci with args: (38,) and kwargs: {}
+[2023-11-14 14:10:32] Running calculate_fibonacci with args: (39,) and kwargs: {}
+[2023-11-14 14:10:32] Calculating the 38-th Fibonacci number
+[2023-11-14 14:10:32] Calculating the 39-th Fibonacci number
+[2023-11-14 14:10:32] Running calculate_fibonacci with args: (40,) and kwargs: {}
+[2023-11-14 14:10:32] Calculating the 40-th Fibonacci number
+[2023-11-14 14:10:32] Running calculate_fibonacci with args: (41,) and kwargs: {}
+[2023-11-14 14:10:32] Calculating the 41-th Fibonacci number
+[2023-11-14 14:10:37] The 38-th Fibonacci number is: 39,088,169
+[2023-11-14 14:10:37] calculate_fibonacci with args: (38,) and kwargs: {} ran in 5.42s
+[2023-11-14 14:10:37] 39088169
+[2023-11-14 14:10:40] The 39-th Fibonacci number is: 63,245,986
+[2023-11-14 14:10:40] calculate_fibonacci with args: (39,) and kwargs: {} ran in 8.80s
+[2023-11-14 14:10:40] 63245986
+[2023-11-14 14:10:45] The 40-th Fibonacci number is: 102,334,155
+[2023-11-14 14:10:45] calculate_fibonacci with args: (40,) and kwargs: {} ran in 13.77s
+[2023-11-14 14:10:45] 102334155
+[2023-11-14 14:10:53] The 41-th Fibonacci number is: 165,580,141
+[2023-11-14 14:10:53] calculate_fibonacci with args: (41,) and kwargs: {} ran in 21.25s
+[2023-11-14 14:10:53] 165580141
+[2023-11-14 14:10:53] All processes finished and returned in  21.30 seconds
+[2023-11-14 14:10:53] run_cpu_bound_as_completed with args: () and kwargs: {} ran in 65.33s
+[2023-11-14 14:10:53] main with args: () and kwargs: {} ran in 210.69s
